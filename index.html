@@ -14,6 +14,7 @@
         function Tree() {
             this.root = null;
         }
+
         Tree.prototype.insert = function (value) {
             if (!this.root) {
                 this.root = new Node(value);
@@ -39,18 +40,35 @@
                 }
             }
             return true;
-        }
-        Tree.prototype.search = function (value) {
         };
+
+        Tree.prototype.search = function (value) {
+            let current = this.root;
+            while (current !== null) {
+                console.log(current.value);
+                if (value === current.value) {
+                    console.log('get!');
+                    return true;
+                }
+                current = value > current.value ? current.right : current.left;
+            }
+            console.log('cannot find!');
+            return false;
+        };
+
         Tree.prototype.preorderTraverse = function () {
 
+
         };
+
+        // test code
         var t = new Tree();
         t.insert(7);
         t.insert(8);
         t.insert(10);
         t.insert(9);
         t.insert(3);
+        t.search(3)
     </script>
 
 </head>
