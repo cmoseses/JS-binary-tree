@@ -56,8 +56,12 @@
             return false;
         };
 
-        Tree.prototype.preorderTraverse = function () {
-
+        Tree.prototype.preorderTraverse = function (node) {
+            if(node){
+                console.log(node.value);
+                this.preorderTraverse(node.left);
+                this.preorderTraverse(node.right);
+            }
 
         };
 
@@ -68,7 +72,13 @@
         t.insert(10);
         t.insert(9);
         t.insert(3);
-        t.search(3)
+        t.insert(12);
+        t.insert(11);
+        t.insert(4);
+        t.insert(5);
+        t.insert(1);
+        t.search(3);
+        t.preorderTraverse(t.root);
     </script>
 
 </head>
