@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Binary tree</title>
+
+    <script type="text/javascript">
+        function Node(value) {
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+
+        function Tree() {
+            this.root = null;
+        }
+        Tree.prototype.insert = function (value) {
+            if (!this.root) {
+                this.root = new Node(value);
+                return true;
+            }
+            let node = new Node(value);
+            let current = this.root;
+            while (current !== null) {
+                if (value < current.value) {
+                    if (current.left === null) {
+                        current.left = node;
+                        break;
+                    } else {
+                        current = current.left;
+                    }
+                } else {
+                    if (current.right === null) {
+                        current.right = node;
+                        break;
+                    } else {
+                        current = current.right;
+                    }
+                }
+            }
+            return true;
+        }
+        Tree.prototype.search = function (value) {
+        };
+        Tree.prototype.preorderTraverse = function () {
+
+        };
+        var t = new Tree();
+        t.insert(7);
+        t.insert(8);
+        t.insert(10);
+        t.insert(9);
+        t.insert(3);
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
