@@ -16,12 +16,12 @@
         }
 
         Tree.prototype.insert = function (value) {
+            var node = new Node(value);
+            var current = this.root;
             if (!this.root) {
                 this.root = new Node(value);
                 return true;
             }
-            var node = new Node(value);
-            var current = this.root;
             while (current !== null) {
                 if (value < current.value) {
                     if (current.left === null) {
@@ -56,11 +56,11 @@
             return false;
         };
 
-        Tree.prototype.preorderTraverse = function (node) {
-            if(node){
+        Tree.prototype.preOrderTraverse = function (node) {
+            if (node) {
                 console.log(node.value);
-                this.preorderTraverse(node.left);
-                this.preorderTraverse(node.right);
+                this.preOrderTraverse(node.left);
+                this.preOrderTraverse(node.right);
             }
 
         };
@@ -78,7 +78,7 @@
         tree.insert(5);
         tree.insert(1);
         tree.search(3);
-        tree.preorderTraverse(tree.root);
+        tree.preOrderTraverse(tree.root);
     </script>
 
 </head>
