@@ -17,3 +17,4 @@ Learning from:
 - [ES5严格模式(Strict mode)](http://www.cnblogs.com/snandy/p/3428171.html)
 - [JavaScript、ES5、ES6有什么](http://www.codesec.net/view/203109.html)
 - [深入浅出ES6 - Proxies](http://www.infoq.com/cn/articles/es6-in-depth-proxies-and-reflect/)
+- [TypeScript中文网](http://tslang.cn/docs/tutorial.html)
