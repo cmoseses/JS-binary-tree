@@ -19,3 +19,4 @@ Learning from:
 - [深入浅出ES6 - Proxies](http://www.infoq.com/cn/articles/es6-in-depth-proxies-and-reflect/)
 - [TypeScript中文网](http://tslang.cn/docs/tutorial.html)
 - [廖雪峰JS](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+- [JavaScript Puzzlers](http://javascript-puzzlers.herokuapp.com/)
