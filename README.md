@@ -20,3 +20,5 @@ Learning from:
 - [TypeScript中文网](http://tslang.cn/docs/tutorial.html)
 - [廖雪峰JS](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 - [JavaScript Puzzlers](http://javascript-puzzlers.herokuapp.com/)
+- [12-simple-yet-powerful-javascript-tips](http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/)
+- [leetcode 算法网站](https://leetcode.com/)
