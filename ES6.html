@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>JS Binary tree</title>
@@ -76,65 +77,69 @@
          * // Symbols
          * // Promises
          * */
-        function Node(value) {
-            this.value = value;
-            this.left = null;
-            this.right = null;
+        class Node {
+            constructor(value) {
+                this.value = value;
+                this.left = null;
+                this.right = null;
+            }
         }
 
-        function Tree() {
-            this.root = null;
-        }
 
-        Tree.prototype.insert = function (value) {
-            let node = new Node(value);
-            let current = this.root;
-            if (!this.root) {
-                this.root = new Node(value);
-                return true;
+        class Tree {
+            constructor() {
+                this.root = null;
             }
-            while (current !== null) {
-                if (value < current.value) {
-                    if (current.left === null) {
-                        current.left = node;
-                        break;
-                    } else {
-                        current = current.left;
-                    }
-                } else {
-                    if (current.right === null) {
-                        current.right = node;
-                        break;
-                    } else {
-                        current = current.right;
-                    }
-                }
-            }
-            return true;
-        };
 
-        Tree.prototype.search = function (value) {
-            let current = this.root;
-            while (current !== null) {
-                console.log(current.value);
-                if (value === current.value) {
-                    console.log('get!');
+            insert(value) {
+                let node = new Node(value);
+                let current = this.root;
+                if (!this.root) {
+                    this.root = new Node(value);
                     return true;
                 }
-                current = value > current.value ? current.right : current.left;
+                while (current !== null) {
+                    if (value < current.value) {
+                        if (current.left === null) {
+                            current.left = node;
+                            break;
+                        } else {
+                            current = current.left;
+                        }
+                    } else {
+                        if (current.right === null) {
+                            current.right = node;
+                            break;
+                        } else {
+                            current = current.right;
+                        }
+                    }
+                }
+                return true;
             }
-            console.log('cannot find!');
-            return false;
-        };
 
-        Tree.prototype.preOrderTraverse = function (node) {
-            if (node) {
-                console.log(node.value);
-                this.preOrderTraverse(node.left);
-                this.preOrderTraverse(node.right);
+            search(value) {
+                let current = this.root;
+                while (current !== null) {
+                    console.log(current.value);
+                    if (value === current.value) {
+                        console.log('get!');
+                        return true;
+                    }
+                    current = value > current.value ? current.right : current.left;
+                }
+                console.log('cannot find!');
+                return false;
             }
-        };
 
+            preOrderTraverse(node) {
+                if (node) {
+                    console.log(node.value);
+                    this.preOrderTraverse(node.left);
+                    this.preOrderTraverse(node.right);
+                }
+            }
+        }
         // test code
         let tree = new Tree();
         let dataList = [7, 8, 10, 9, 3, 12, 11, 4, 5, 1, 3];
@@ -146,7 +151,9 @@
     </script>
 
 </head>
+
 <body>
 
 </body>
+
 </html>
